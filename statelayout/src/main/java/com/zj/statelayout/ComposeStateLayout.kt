@@ -12,7 +12,12 @@ enum class PageState {
     CONTENT
 }
 
-data class PageStateData(val status: PageState, val tag: Any? = null)
+data class PageStateData(
+    val status: PageState,
+    val tag: Any? = null,
+    val what: Any? = null,
+    val what2: Any? = null,
+)
 
 data class StateLayoutData(val pageStateData: PageStateData, val retry: OnRetry = {})
 
